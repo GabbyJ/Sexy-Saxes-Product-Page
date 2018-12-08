@@ -1,0 +1,337 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<html>
+<head>
+<style>
+	
+	body{
+		margin: 0;
+		padding: 0;
+	}
+	h1{
+		text-align: center;
+		
+	}
+	#nav-bar{
+		background: black;
+		
+  padding: 5px;
+  font-family: sans-serif;
+  color: black;
+		float: left;
+    margin: -10px 0px 0px -10px;
+    overflow:hidden;
+    text-align: center;
+		width: 100%;
+		position:fixed;
+	}
+	.navmain{
+		margin: 0;
+    padding: 0;
+		margin-top: 1.5%;
+		text-align: right;
+		
+		
+	}
+	li{
+		display: inline-block;
+    list-style-type: none;
+		padding: 20px;		
+		margin: 0px;
+		font-size: 18px;
+	
+	}
+	button a{
+		color: black;
+	}
+	
+	a{
+		text-decoration: none;
+		color: goldenrod; 
+		
+	}
+	
+	a:hover{
+		text-decoration: none;
+		color: white; 
+		
+	}
+	.anchor{
+		display: block;
+		height: 110px;
+		margin-top: -110px;
+		visibility: hidden;
+	}
+	
+	
+	input{
+		text-align: center;
+		
+	}
+	#header-img{
+		float: left;
+    position: relative;
+    margin: 10px 15px 15px 10px;
+		width: 20%;		
+		
+	}
+	
+	#submit{
+		background-color: goldenrod;
+		color: black;
+		font-family: Arial, "sans-serif";
+		font-size: 14px;
+		padding: 10px;
+		width: 200px;
+		height: 35px;
+			
+	}
+	#email{
+		width: 400px;
+		height: 30px;
+		
+	}
+	#input{
+		
+		text-align: center;
+	}
+	#submit{
+		font-weight: bold;
+		font-family: Arial, "sans-serif";
+	}
+	form{
+		padding-top: 150px;
+	}
+	
+	#maindescriptions{
+		list-style: none;	
+		
+	}
+	.descriptions{
+		margin-left: 80px;
+		margin-bottom: 20px;
+	}
+	h2{
+		line-height: 5px;
+	}
+	.descriptions strong{
+		
+		
+		line-height: 55px;
+		font-size: 20px;
+		font-family: Arial, sans-serif;
+	}
+	
+	.video{
+    text-align: center;
+    padding: 10px;
+    font-size: x-small;		
+	}
+	.video p{
+		margin-right: 440px;
+	}
+	/*CSS FLEXBOX*/
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+	text-align: center;
+}
+.flex-grid-thirds .col {
+  width: 32%;
+	
+}
+	.col{
+		padding: 20px;
+		border: solid black 1px;
+	}
+/*END CSS FLEXBOX*/
+	
+	#alto, #soprano, #tenor{
+		
+		border: solid black 1px;
+		margin: 3%;
+		float: left;
+		overflow:hidden;
+		text-align: center;
+		padding: 20px;
+		
+		
+	}
+	h3{
+		background-color: black;
+		color: goldenrod;
+		text-align: center;
+		margin: -20;
+		padding: 10px;
+		font-size: 20px;
+		font-family: Arial, "sans-serif";
+		width: 110%;
+	}
+	#alto li, #soprano li, #tenor li{
+		list-style: none;
+		text-align: center;
+		padding: 10px;
+		font-size: 20px;
+		margin-right: 40px;
+	}
+	.select{
+		background-color: goldenrod;
+		color: black;
+		font-family: Arial, "sans-serif";
+		font-size: 14px;
+		padding: 10px;
+		width: 200px;
+		height: 35px;
+		
+	}
+	
+	
+	footer{
+		background-color: black;
+		color: goldenrod;
+		text-align: right;
+		padding: 10px;
+		float: right;
+		width: 100%;
+	}
+/*MOBILE VIEW*/
+	@media (max-width: 400px) {
+		.video p{
+		margin-right: 200px;
+	}
+	}
+@media (max-width: 800px) {
+    flex-wrap: wrap;
+	#header-img{
+		width: 60vw;
+	}
+	nav{
+		margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+	}
+	
+	#soprano, #alto, #tenor{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+	
+	}
+	h3{
+		width: 130%;
+	}
+	.flex-grid-thirds {
+    display: block;
+	}
+    .col {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
+	footer{
+		width: 150%;
+		
+	}
+
+	
+  }
+	
+
+</style>
+<title>Product Landing Page</title>
+</head>
+
+<body>
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+	<header id="header">
+<span class="anchor" id="top"></span>
+		<nav id="nav-bar" >
+			
+			<a href="#top"><img id="header-img" src="https://i.ibb.co/JKhDy4k/sax-logo-full.png" alt="Sexy Saxes logo" border="0"></a>
+			<ul class="navmain">
+			
+				<li><a class="nav-link" href="#features">Features</a></li>
+				<li><a class="nav-link" href="#howitworks">How it works</a></li>
+				<li><a class="nav-link" href="#pricing">Pricing</a></li>
+			</ul>
+		</nav>
+	</header>
+	<form id="form" action="https://www.freecodecamp.com/email-submit">
+		<h1>Handcrafted homemade masterpieces</h1>
+		<div id="input"><p><input name="email" id="email" type="email" placeholder="Enter your email address" required/></p>
+		<p><input id="submit" type="submit" value="Get Started"></p></div>
+	</form>
+	
+<div id="descriptions">
+	<span class="anchor" id="features"></span>
+	<ul id="maindescriptions">
+		<p ><li class="descriptions"><strong>Premium Materials</strong><br>Our saxophones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.<br>Our reeds come from the finest wood in the country</li></p>
+		<p><li class="descriptions">
+		  <strong>Fast Shipping</strong>
+	    <br>We make sure you recieve your saxophone as soon as we have finished making it. We also provide free returns if you are not satisfied (But we guarentee you will be).</li></p>
+	  <p><li class="descriptions">
+	    <strong>Quality Assurance</strong>
+      <br>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument and the quality of the sound.</li></p>
+	</ul>
+</div>
+	<div class="video">
+		<span class="anchor" id="howitworks"></span>
+	<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/QN2RnjFHmNY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<p>*I don't own this video or song</p>
+</div>
+	
+<!-------FLEXBOX 3 BOXES-------->
+<span class="anchor" id="pricing"></span>
+<div class="flex-grid-thirds">
+  <div class="col" id="soprano">
+	<h3>SOPRANO SAX</h3>
+		<ul>
+			<li><strong>$800</strong></li>
+		</ul>
+		<ul>
+			<li>Professional Bore</li>
+			<li>Lighter weight, single post construction</li>
+			<li>Intermediate Manufacturing Techniques</li>
+			<li>Hardshell Case</li>
+		</ul>
+		<p><button class="select" type="submit"><a href="#"><strong>Select</strong></a></button></p>
+	</div>
+  <div class="col" id="alto">
+	<h3>ALTO SAX</h3>
+		<ul>
+			<li><strong>$1100</strong></li>
+		</ul>
+		<ul>
+			<li>Selmer Style Ribbed Body Construction</li>
+			<li>Mother of Pearl or Abalone Touches</li>
+			<li>Upgraded Ligature and Case</li>
+			<li>Deluxe Series with Elaborate Hand Engraving</li>
+		</ul>
+		<p><button class="select" type="submit"><a href="#"><strong>Select</strong></a></button></p>
+	</div>
+  <div class="col" id="tenor">
+	<h3>TENOR SAX</h3>
+		<ul>
+			<li><strong>$1500</strong></li>
+		</ul>
+		<ul>
+			<li>Completely Handmade by 4 Artisan Craftsmen</li>
+			<li>Pisoni Pro Pads</li>
+			<li>Multiple Finish Options</li>
+			<li>Professional Mouthpiece and Case</li>
+		</ul>
+		<p><button class="select" type="submit"><a href="#"><strong>Select</strong></a></button></p>
+	</div>
+</div>
+
+<footer>©2018 Gabrielle Jacobs<br>Sexy Saxes Product Page</footer>
+</body>
+</html>
